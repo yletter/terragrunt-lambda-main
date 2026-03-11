@@ -11,19 +11,23 @@ Two independent environments (**stage** and **prod**) managed via Terragrunt's D
 ├── lambda/
 │   └── index.js                          # Lambda handler (reads ENVIRONMENT env var)
 │
-├── terraform/                            # Reusable Terraform module
+├── modules/                            # Reusable Terraform module
 │   ├── main.tf
 │   ├── variables.tf
 │   └── outputs.tf
 │
-└── terragrunt/
-    ├── root.hcl                          # Shared: region, remote state, common tags
+├── lambda/
+│   └── index.js
+|
+├── root.hcl                          # Shared: region, remote state, common tags
+|
+├── terragrunt.hcl
+|
+└── environment/
     ├── stage/
-    │   └── lambda/
-    │       └── terragrunt.hcl            # Stage overrides (128 MB, 10s timeout)
+    │   └── terragrunt.hcl            # Stage overrides (128 MB, 10s timeout)
     └── prod/
-        └── lambda/
-            └── terragrunt.hcl            # Prod overrides  (256 MB, 30s timeout)
+        └── terragrunt.hcl            # Prod overrides  (256 MB, 30s timeout)
 ```
 
 ---
