@@ -5,10 +5,6 @@ include "root" {
   expose = true   # gives access to include.root.locals.*
 }
 
-terraform {
-  source = "git::https://github.com/yletter/terragrunt-lambda-module.git//?ref=v1.0.0"
-}
-
 inputs = {
   environment   = include.root.locals.environment   # auto-derived as "prod"
   aws_region    = include.root.locals.aws_region
