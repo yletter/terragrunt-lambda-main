@@ -1,4 +1,4 @@
-name: Terraform AWS Lambda Apply
+name: Terraform AWS Lambda Execution
 
 on:
   push:
