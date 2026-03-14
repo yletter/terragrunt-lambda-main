@@ -21,7 +21,7 @@ locals {
 }
 
 terraform {
-  source = "git::https://github.com/yletter/terragrunt-lambda-module.git//modules?ref=v1.0.0"
+  source = "git::https://github.com/yletter/terragrunt-lambda-module.git//modules?ref=v1.0.1"
 }
 
 # ─── Remote State (S3 + DynamoDB locking) ────────────────────────────────────
