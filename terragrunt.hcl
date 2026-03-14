@@ -5,10 +5,6 @@ include "root" {
   expose = true   # gives access to include.root.locals.*
 }
 
-# terraform {
-#   source = "${get_repo_root()}//modules"
-# }
-
 terraform {
   source = "git::https://github.com/yletter/terragrunt-lambda-module.git//modules?ref=v1.0.0"
 }
