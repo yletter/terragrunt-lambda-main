@@ -6,7 +6,7 @@ include "root" {
 }
 
 terraform {
-  source = "${get_repo_root()}//modules"
+  source = "git::https://github.com/yletter/terragrunt-lambda-module.git?ref=v1.0.0"
 }
 
 inputs = {
